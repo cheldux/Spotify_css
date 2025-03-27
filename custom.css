@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Custom Flat Spotify
 @namespace      github.com/openstyles/stylus
-@license		MIT
-@version        1.0.1
+@license	MIT
+@version        1.0.2
 @description    Custom color theme for spotify
 @author         cheldux
 @preprocessor   stylus
@@ -99,6 +99,8 @@
     }
 
     .hIFR8WDm_54EEIa1gwpC,
+    .XVz4BMGP5zAEE5p90mYK,
+    .Bdcf5g__Rug3TGqSdbiy
     {
         display: none !important;
     }
@@ -132,6 +134,10 @@
 
     .EmeHQXR87mUskYK6xEde {
         isolation: inherit;
+    }
+    
+    .encore-internal-color-text-subdued {
+        color: inherit;
     }
 
     if hide_bg {
