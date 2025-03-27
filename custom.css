@@ -2,26 +2,38 @@
 @name           Custom Flat Spotify
 @namespace      github.com/openstyles/stylus
 @license		MIT
-@version        1.0.0
+@version        1.0.1
 @description    Custom color theme for spotify
 @author         cheldux
 @preprocessor   stylus
 
+@var checkbox hide_bg "Hide artists background picture" 0
+@var checkbox use_custom_press "Use custom press color" 0
+@var checkbox use_custom_bg "Use custom background color" 0
+@var checkbox use_custom_border "Use custom border color" 0
 @var color custom_color "CT: Custom color" #214291
 @var color custom_accent_color "CT: Custom accent color" #2f5ed0
+@var color custom_press_color "CT: Custom press color" #2fd0c3
+@var color custom_bg_color "CT: Custom background color" #121212ff
+@var color custom_border_color "CT: Custom border color" #121212ff
 ==/UserStyle== */
 @-moz-document domain("open.spotify.com") {
     /*special thanks to regex and neovim*/
-    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq {
-        color: custom_color;
-    }
-
+    /*I just kept parts of the official css
+    that had their green colors and then
+    changed them to the vars.
+    I have zero idea what these selectors
+    actually do.*/
+    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq,
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:focus,
-    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:hover {
+    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:hover,
+    .control-button--active:not(.control-button--disabled):active:focus,
+    .control-button--active:not(.control-button--disabled):active:hover {
         color: custom_color;
     }
 
-    .KAZD28usA1vPz5GVpm63.EHxL6K_6WWDlTCZP6x5w:after {
+    .KAZD28usA1vPz5GVpm63.EHxL6K_6WWDlTCZP6x5w:after,
+    .control-button--active-dot:after {
         background-color: custom_color;
     }
 
@@ -35,56 +47,55 @@
         color: custom_color;
     }
 
-    .control-button--active:not(.control-button--disabled):active:focus,
-    .control-button--active:not(.control-button--disabled):active:hover {
-        color: custom_color;
-    }
-
-    .control-button--active-dot:after {
-        background-color: custom_color;
-    }
-
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:focus,
-    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:hover {
-        color: custom_accent_color;
-    }
-
-    .control-button-heart[aria-checked=true] {
-        color: custom_accent_color;
-    }
-
+    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:hover,
+    .control-button-heart[aria-checked=true],
     .control-button--active:not(.control-button--disabled):focus,
     .control-button--active:not(.control-button--disabled):hover {
         color: custom_accent_color;
     }
 
+    /*that part was hand made for the
+    elements that were still green or
+    white, and also to remove all
+    gradient parts of the UI.*/
     .encore-dark-theme,
     .encore-dark-theme .encore-base-set {
         --text-bright-accent: custom_color;
+        if use_custom_bg {
+            --background-base: custom_bg_color;
+        }
     }
 
-    .encore-dark-theme .encore-bright-accent-set {
-        --background-base: custom_color;
-        --background-highlight: custom_accent_color;
-        --background-press: mix(custom_color, custom_accent_color, 50%);
-    }
-
+    .encore-dark-theme .encore-bright-accent-set,
     .encore-dark-theme .encore-inverted-light-set {
         --background-base: custom_color;
         --background-highlight: custom_accent_color;
-        --background-press: mix(custom_color, custom_accent_color, 50%);
+        if use_custom_press {
+            --background-press: custom_press_color;
+        }
+        else {
+            --background-press: mix(custom_color, custom_accent_color, 30%);
+        }
     }
 
     .S4OmZ_IZexmZ5dasPqW5,
     .PeLrpasyfBW8ql_bmoAi,
-    .PkOz5g82CaoKk1J3GX0e {
+    .PkOz5g82CaoKk1J3GX0e,
+    .e-9640-button.e-9640-button-primary.encore-text-body-small-bold,
+    .e-9640-button--leading.e-9640-button--small.e-9640-overflow-wrap-anywhere.encore-text-body-small-bold.hgbBnc.Button-sc-1dqy6lx-0 {
         display: none;
     }
 
     .T1xI1RTSFU7Wu94UuvE6,
     .EvIR4O7jOSbNmxtMdIQ0,
     .cj6vRk3nFAi80HSVqX91 {
-        background-color: #121212ff;
+        if use_custom_bg {
+            background-color: custom_bg_color;
+        }
+        else {
+            background-color: #121212;
+        }
     }
 
     .hIFR8WDm_54EEIa1gwpC,
@@ -96,11 +107,36 @@
         background-color: inherit;
     }
 
+
+
+
     .Z35BWOA10YGn5uc9YgAp:hover {
-        background-color: mix(#121212, custom_color, 80%);
+        if use_custom_bg {
+            background-color: mix(custom_bg_color, custom_color, 80%);
+        }
+        else {
+            background-color: mix(#121212, custom_color, 80%);
+        }
+    }
+
+    if use_custom_border {
+        .ZQftYELq0aOsg6tPbVbV,
+        .wp7mZFPzV7Qmo51F0NA_ {
+            background-color: custom_border_color !important;
+        }
     }
 
     .e-9640-logo {
         fill: custom_color;
+    }
+
+    .EmeHQXR87mUskYK6xEde {
+        isolation: inherit;
+    }
+
+    if hide_bg {
+        .under-main-view {
+            display: none
+        }
     }
 }
