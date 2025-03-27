@@ -1,0 +1,105 @@
+/* ==UserStyle==
+@name           Custom Flat Spotify
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Custom color theme for spotify
+@author         cheldux
+@preprocessor   stylus
+
+@var color custom_color "CT: Custom color" #214291
+@var color custom_accent_color "CT: Custom accent color" #2f5ed0
+==/UserStyle== */
+@-moz-document domain("open.spotify.com") {
+    /*special thanks to regex and neovim*/
+    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq {
+        color: custom_color;
+    }
+
+    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:focus,
+    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:hover {
+        color: custom_color;
+    }
+
+    .KAZD28usA1vPz5GVpm63.EHxL6K_6WWDlTCZP6x5w:after {
+        background-color: custom_color;
+    }
+
+    .TywOcKZEqNynWecCiATc {
+        --is-active-fg-color: custom_accent_color;
+        --fg-color: custom_color;
+    }
+
+    .control-button--active {
+        fill: custom_color;
+        color: custom_color;
+    }
+
+    .control-button--active:not(.control-button--disabled):active:focus,
+    .control-button--active:not(.control-button--disabled):active:hover {
+        color: custom_color;
+    }
+
+    .control-button--active-dot:after {
+        background-color: custom_color;
+    }
+
+    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:focus,
+    .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:hover {
+        color: custom_accent_color;
+    }
+
+    .control-button-heart[aria-checked=true] {
+        color: custom_accent_color;
+    }
+
+    .control-button--active:not(.control-button--disabled):focus,
+    .control-button--active:not(.control-button--disabled):hover {
+        color: custom_accent_color;
+    }
+
+    .encore-dark-theme,
+    .encore-dark-theme .encore-base-set {
+        --text-bright-accent: custom_color;
+    }
+
+    .encore-dark-theme .encore-bright-accent-set {
+        --background-base: custom_color;
+        --background-highlight: custom_accent_color;
+        --background-press: mix(custom_color, custom_accent_color, 50%);
+    }
+
+    .encore-dark-theme .encore-inverted-light-set {
+        --background-base: custom_color;
+        --background-highlight: custom_accent_color;
+        --background-press: mix(custom_color, custom_accent_color, 50%);
+    }
+
+    .S4OmZ_IZexmZ5dasPqW5,
+    .PeLrpasyfBW8ql_bmoAi,
+    .PkOz5g82CaoKk1J3GX0e {
+        display: none;
+    }
+
+    .T1xI1RTSFU7Wu94UuvE6,
+    .EvIR4O7jOSbNmxtMdIQ0,
+    .cj6vRk3nFAi80HSVqX91 {
+        background-color: #121212ff;
+    }
+
+    .hIFR8WDm_54EEIa1gwpC,
+    {
+        display: none !important;
+    }
+
+    .Z35BWOA10YGn5uc9YgAp {
+        background-color: inherit;
+    }
+
+    .Z35BWOA10YGn5uc9YgAp:hover {
+        background-color: mix(#121212, custom_color, 80%);
+    }
+
+    .e-9640-logo {
+        fill: custom_color;
+    }
+}
