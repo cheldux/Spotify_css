@@ -2,7 +2,7 @@
 @name           Custom Flat Spotify
 @namespace      github.com/openstyles/stylus
 @license	MIT
-@version        1.0.2
+@version        1.0.3
 @description    Custom color theme for spotify
 @author         cheldux
 @preprocessor   stylus
@@ -101,7 +101,8 @@
 
     .T1xI1RTSFU7Wu94UuvE6,
     .EvIR4O7jOSbNmxtMdIQ0,
-    .cj6vRk3nFAi80HSVqX91 {
+    .cj6vRk3nFAi80HSVqX91,
+    .esBjsh {
         if use_custom_bg {
             background-color: custom_bg_color;
         }
