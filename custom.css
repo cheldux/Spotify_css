@@ -62,8 +62,20 @@
     .encore-dark-theme,
     .encore-dark-theme .encore-base-set {
         --text-bright-accent: custom_color;
+        --text-positive: custom_color;
+        --essential-bright-accent: custom_color;
+        --essential-positive: custom_color;
         if use_custom_bg {
             --background-base: custom_bg_color;
+            /*hard to get the exact same colors
+			but it's good enough*/
+            --background-highlight: mix(custom_bg_color, #ffffff, 95%);
+            --background-elevated-base: mix(custom_bg_color, #ffffff, 95%);
+            --background-elevated-highlight: mix(custom_bg_color, #ffffff, 89%);
+            --background-elevated-press: mix(custom_bg_color, #ffffff, 97%);
+        }
+        if use_custom_border {
+            --background-press: custom_border_color;
         }
     }
 
@@ -100,19 +112,22 @@
 
     .hIFR8WDm_54EEIa1gwpC,
     .XVz4BMGP5zAEE5p90mYK,
-    .Bdcf5g__Rug3TGqSdbiy
-    {
+    .Bdcf5g__Rug3TGqSdbiy,
+    .aaFQbW0j0N40v_siz0kX::before {
         display: none !important;
     }
 
-    .Z35BWOA10YGn5uc9YgAp {
+    .Z35BWOA10YGn5uc9YgAp,
+    .kcRGDn::after {
         background-color: inherit;
+        transition: none;
     }
 
 
 
 
-    .Z35BWOA10YGn5uc9YgAp:hover {
+    .Z35BWOA10YGn5uc9YgAp:hover,
+    .kcRGDn:hover::after {
         if use_custom_bg {
             background-color: mix(custom_bg_color, custom_color, 80%);
         }
@@ -135,14 +150,99 @@
     .EmeHQXR87mUskYK6xEde {
         isolation: inherit;
     }
-    
+
     .encore-internal-color-text-subdued {
         color: inherit;
     }
 
+    /*I said flat*/
+    .nYdM55iHFByRTzJUmx9X,
+    .tippy-box[data-theme~=activation],
+    .tp8rO9vtqBGPLOhwcdYv.BzunmwrVMyWGpopPJRt2:after,
+    .NbcaczStd8vD2rHWwaKv,
+    .vreceNX3ABcxyddeS83B,
+    .hykQHtPI6EeFREwqRrOR,
+    .R1LAYqlvoHyvSWVzo0lh,
+    .JMFuNKBYyJzmnXyTJ5Bg,
+    .FeEAKmWk_VtR7jCawvei,
+    .V5kle5COkVEN5X6CkL7q,
+    .xlLQHgpip3xYOwRYpwun,
+    .GimJ6fo6WOYPyWNVpSr1,
+    .b7r2WRiu5f9Q99qmyreh:hover .CVuGEUIxLkNKpMds8AFS,
+    .b7r2WRiu5f9Q99qmyreh .CVuGEUIxLkNKpMds8AFS,
+    .b7r2WRiu5f9Q99qmyreh .CVuGEUIxLkNKpMds8AFS:focus,
+    .k4sYYpEpX2f7RMAPHv3F,
+    ._w3sHVCUhYgvQar5WNHw:before,
+    .woJQ5t2YiaJhjTv_KE7p,
+    .GOcsybnoHYyJGQGDRuwj,
+    .NI1OxoVdokxENPAjoeOk,
+    .mxGhI8Lr7MoGOnFrbsUa.BHHXR8xc6m009ohY6aKU,
+    ._EShSNaBK1wUIaZQFJJQ,
+    ._2ajKWDiy6YvJu5wo8I1g.IpXjqI9ouS_N5zi0WM88,
+    .DquSH3YjnaIIXMZiOvwA,
+    .LAdTOeZ2QwKXGF4XAXZ8,
+    .XvgFwKtvocRdadc47KE9:focus-visible,
+    .XTygmcBFgNjoo0ckBBll,
+    .JEd1tp9FdtDLBOCRSVe0,
+    .H0HbpIM3UrcupWIAjLWu,
+    .dFz3mTMCEntyqsdPM0FF,
+    .ELSmDYJtrr7_ktB1jf97,
+    .xT6oSRia2sXC94ckOTnF,
+    .GSY8YnDV4YNR_W53fPhi,
+    .JP0zpUy6bLRoJXWWX_Nd,
+    :root,
+    .e-9640-overlay,
+    .e-9640-button,
+    .e-9640-form-control,
+    .e-9640-form-control[readonly],
+    .e-9640-form-control--focus-bold,
+    .e-9640-form-control--focus-light,
+    .e-9640-form-control--hover,
+    .e-9640-form-control:focus,
+    .e-9640-form-control:hover,
+    .e-9640-form-control:disabled,
+    .e-9640-form-control:invalid,
+    .e-9640-form-control[aria-invalid=true],
+    .e-9640-form-control:invalid:focus,
+    .e-9640-form-control[aria-invalid=true]:focus,
+    .e-9640-form-control[aria-invalid=false],
+    .e-9640-form-control[aria-invalid=false]:hover,
+    .e-9640-form-control[aria-invalid=false]:focus,
+    .e-9640-form-control--focus-light,
+    .e-9640-form-control--use-focus-light:focus,
+    .e-9640-form-control--use-focus-light:invalid:focus,
+    .e-9640-form-control--use-focus-light[aria-invalid=true]:focus,
+    .e-9640-form-control--focus-bold,
+    .e-9640-form-control--use-focus-bold:focus,
+    .e-9640-form-control--use-focus-bold[aria-invalid=false]:focus,
+    .e-9640-button-primary:active .e-9640-button-primary__inner,
+    .e-9640-form-input[type=file],
+    .e-9640-form-input[type=file]:focus,
+    .e-9640-form-input[type=file]:hover:focus,
+    input:disabled + .e-9640-form-input-icon__icon,
+    input[readonly] + .e-9640-form-input-icon__icon,
+    .e-9640-table-container--is-sticky .e-9640-table-header-cell,
+    .e-9640-tag[href],
+    .e-9640-tag[href]:focus,
+    .e-9640-tag[href]:hover,
+    .e-9640-tag.e-9640-text-link[href],
+    .e-9640-tag.e-9640-text-link[href]:focus,
+    .e-9640-tag.e-9640-text-link[href]:hover,
+    .Z35BWOA10YGn5uc9YgAp .zXwER4Lsqq_e7fVVaPkZ,
+    .Z35BWOA10YGn5uc9YgAp .Kcb74zm1aMqGfPxTwO5s .vq0lsCoYrDUDvkuUIaRg,
+    .qWtIAYA_A_mOQIlxBb02 > *,
+    .mEYwOgcSR3UWyvz0OSVE,
+    .PromotionDefaultNativeImage-module_image-container__gQhJp {
+        box-shadow: none;
+    }
+
+    .a2NTH51fJWzWsds0OYv_::after {
+        background: none;
+    }
+
     if hide_bg {
         .under-main-view {
-            display: none
+            display: none;
         }
     }
 }
