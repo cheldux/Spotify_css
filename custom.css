@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name           Custom Flat Spotify
+@name           Spotify Custom Flat
 @namespace      github.com/openstyles/stylus
 @license	MIT
-@version        1.0.3
+@version        1.0.4
 @description    Custom color theme for spotify
 @author         cheldux
 @preprocessor   stylus
@@ -28,7 +28,8 @@
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:focus,
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:hover,
     .control-button--active:not(.control-button--disabled):active:focus,
-    .control-button--active:not(.control-button--disabled):active:hover {
+    .control-button--active:not(.control-button--disabled):active:hover,
+    .mWj8N7D_OlsbDgtQx5GW[role=menuitemradio][aria-checked=true] {
         color: custom_color;
     }
 
@@ -124,8 +125,11 @@
         transition: none;
     }
 
-
-
+    if use_custom_bg {
+        .NbcaczStd8vD2rHWwaKv {
+            background-color: mix(custom_bg_color, custom_color, 90%);
+        }
+    }
 
     .Z35BWOA10YGn5uc9YgAp:hover,
     .kcRGDn:hover::after {
