@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Spotify Custom Flat
 @namespace      github.com/openstyles/stylus
-@license	MIT
-@version        1.0.4
+@license	    MIT
+@version        1.0.5
 @description    Custom color theme for spotify
 @author         cheldux
 @preprocessor   stylus
@@ -11,11 +11,11 @@
 @var checkbox use_custom_press "Use custom press color" 0
 @var checkbox use_custom_bg "Use custom background color" 0
 @var checkbox use_custom_border "Use custom border color" 0
-@var color custom_color "CT: Custom color" #214291
-@var color custom_accent_color "CT: Custom accent color" #2f5ed0
-@var color custom_press_color "CT: Custom press color" #2fd0c3
-@var color custom_bg_color "CT: Custom background color" #121212ff
-@var color custom_border_color "CT: Custom border color" #121212ff
+@var color custom_color "Custom color" #214291
+@var color custom_accent_color "Custom accent color" #2f5ed0
+@var color custom_press_color "Custom press color" #2fd0c3
+@var color custom_bg_color "Custom background color" #121212ff
+@var color custom_border_color "Custom border color" #121212ff
 ==/UserStyle== */
 @-moz-document domain("open.spotify.com") {
     /*special thanks to regex and neovim*/
