@@ -1,11 +1,11 @@
 /* ==UserStyle==
-@name           Spotify Custom Flat
-@namespace      github.com/openstyles/stylus
-@license	    MIT
-@version        1.0.5
-@description    Custom color theme for spotify
-@author         cheldux
-@preprocessor   stylus
+@name			Spotify Custom Flat
+@namespace		github.com/openstyles/stylus
+@license		MIT
+@version		1.0.5
+@description	Custom color theme for spotify
+@author			cheldux
+@preprocessor	stylus
 
 @var checkbox hide_bg "Hide artists background picture" 0
 @var checkbox use_custom_press "Use custom press color" 0
