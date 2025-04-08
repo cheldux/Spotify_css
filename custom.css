@@ -1,11 +1,11 @@
 /* ==UserStyle==
-@name			Spotify Custom Flat
-@namespace		github.com/openstyles/stylus
-@license		MIT
-@version		1.0.5
-@description	Custom color theme for spotify
-@author			cheldux
-@preprocessor	stylus
+@name           Spotify Custom Flat
+@namespace      github.com/openstyles/stylus
+@license        MIT
+@version        1.0.5
+@description    Custom color theme for spotify
+@author         cheldux
+@preprocessor   stylus
 
 @var checkbox hide_bg "Hide artists background picture" 0
 @var checkbox use_custom_press "Use custom press color" 0
@@ -14,8 +14,9 @@
 @var color custom_color "Custom color" #214291
 @var color custom_accent_color "Custom accent color" #2f5ed0
 @var color custom_press_color "Custom press color" #2fd0c3
-@var color custom_bg_color "Custom background color" #121212ff
-@var color custom_border_color "Custom border color" #121212ff
+@var color custom_bg_color "Custom background color" #070d1d
+@var color custom_border_color "Custom border color" #040811
+@var range hue_shift_equalizer "Hue shift equalizer gif" [0, 0, 360, 1]
 ==/UserStyle== */
 @-moz-document domain("open.spotify.com") {
     /*special thanks to regex and neovim*/
@@ -249,5 +250,11 @@
         .under-main-view {
             display: none;
         }
+    }
+
+    /*filter for the bar gif*/
+    .jxXIarsEHgz2HoaVCVzA,
+    .DZJJ5SCypi2mREbjy5bx {
+        filter: hue-rotate(hue_shift_equalizer deg);
     }
 }
