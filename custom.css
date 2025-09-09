@@ -2,7 +2,7 @@
 @name           Spotify Custom Flat
 @namespace      github.com/openstyles/stylus
 @license        MIT
-@version        1.0.8
+@version        1.0.9
 @description    Custom color theme for spotify
 @author         cheldux
 @preprocessor   stylus
@@ -41,7 +41,8 @@
         background-color: custom_color;
     }
 
-    .TywOcKZEqNynWecCiATc {
+    .NP0jD9fPfkH_VmIJ4hEg,
+    {
         --is-active-fg-color: custom_accent_color;
         --fg-color: custom_color;
     }
@@ -264,8 +265,8 @@
     }
 
     /*filter for the bar gif*/
-    .jxXIarsEHgz2HoaVCVzA,
-    .DZJJ5SCypi2mREbjy5bx {
+    .H70qcBekoGWOlskuON5R,
+    {
         filter: hue-rotate(hue_shift_equalizer deg);
     }
 }
