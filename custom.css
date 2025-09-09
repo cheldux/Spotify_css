@@ -2,7 +2,7 @@
 @name           Spotify Custom Flat
 @namespace      github.com/openstyles/stylus
 @license        MIT
-@version        1.0.7
+@version        1.0.8
 @description    Custom color theme for spotify
 @author         cheldux
 @preprocessor   stylus
@@ -100,7 +100,10 @@
     .PeLrpasyfBW8ql_bmoAi,
     .PkOz5g82CaoKk1J3GX0e,
     .e-9640-button.e-9640-button-primary.encore-text-body-small-bold,
-    .e-9640-button--leading.e-9640-button--small.e-9640-overflow-wrap-anywhere.encore-text-body-small-bold.hgbBnc.Button-sc-1dqy6lx-0 {
+    .e-9640-button--leading.e-9640-button--small.e-9640-overflow-wrap-anywhere.encore-text-body-small-bold.hgbBnc.Button-sc-1dqy6lx-0,
+    .HnVkTECZ2a98QALFTkdq,
+    .UUydeXMsXVZofB0YAOgm::before,
+    {
         display: none;
     }
 
