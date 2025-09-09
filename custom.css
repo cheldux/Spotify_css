@@ -2,7 +2,7 @@
 @name           Spotify Custom Flat
 @namespace      github.com/openstyles/stylus
 @license        MIT
-@version        1.0.6
+@version        1.0.7
 @description    Custom color theme for spotify
 @author         cheldux
 @preprocessor   stylus
@@ -26,6 +26,7 @@
     I have zero idea what these selectors
     actually do.*/
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq,
+    .pJ7RQa2Lqdi9JOvfKGAA.eFrQ8hr8h9gs3tIFTSWV,
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:focus,
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:active:hover,
     .control-button--active:not(.control-button--disabled):active:focus,
@@ -35,6 +36,7 @@
     }
 
     .KAZD28usA1vPz5GVpm63.EHxL6K_6WWDlTCZP6x5w:after,
+    .pJ7RQa2Lqdi9JOvfKGAA.WOIKebyj47byTnTaucoA::after,
     .control-button--active-dot:after {
         background-color: custom_color;
     }
@@ -51,6 +53,7 @@
 
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:focus,
     .KAZD28usA1vPz5GVpm63.RK45o6dbvO1mb0wQtSwq:hover,
+    .pJ7RQa2Lqdi9JOvfKGAA.eFrQ8hr8h9gs3tIFTSWV:hover,
     .control-button-heart[aria-checked=true],
     .control-button--active:not(.control-button--disabled):focus,
     .control-button--active:not(.control-button--disabled):hover {
@@ -145,7 +148,11 @@
     if use_custom_border {
         .ZQftYELq0aOsg6tPbVbV,
         .wp7mZFPzV7Qmo51F0NA_,
-        .JG5J9NWJkaUO9fiKECMA {
+        .JG5J9NWJkaUO9fiKECMA,
+        .POZtIm1wHFiwlxZY5i0a,
+        .f9pLH3HRZQxdDLzNqKjE,
+        .wgtzoAN2iFV0pENAqJko,
+        {
             background-color: custom_border_color !important;
         }
     }
